@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="border">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Splitter</title>
+    <script src="code.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload="main()">
+    <h1>Text Splitter</h1>
+    <fieldset class="block" id="area1">
+      <legend>Input</legend>
+      Split By: <br />
+      <input
+        type="button"
+        value="Characters"
+        name="format"
+        onclick="splitOutput(this.value)"
+      />
+      <input
+        type="button"
+        value="Words"
+        name="format"
+        onclick="splitOutput(this.value)"
+      />
+      <input
+        type="button"
+        value="Sentences"
+        name="format"
+        onclick="splitOutput(this.value)"
+      />
+      <input
+        type="button"
+        value="New Lines"
+        name="format"
+        onclick="splitOutput(this.value)"
+      /><br /><br />
+      Options for <i>Split by Characters</i>:<br />
+      <input type="radio" value="Number" name="splitBy" /> Number
+      <input type="radio" value="Percentage" name="splitBy" /> Percentage <br />
+      <div id="splitOption"></div>
+
+      <br />
+      <textarea rows="12" cols="68" name="info" id="user-input"></textarea
+      ><br />
+    </fieldset>
+    <fieldset class="block" id="area2">
+      <legend>Output</legend>
+      <div id="buttons"></div>
+      <textarea
+        rows="12"
+        cols="68"
+        name="info"
+        id="user-output"
+        disabled
+      ></textarea
+      ><br />
+    </fieldset>
+    <div id="toast" class="hidden">Copied to Clipboard</div>
+  </body>
+</html>
